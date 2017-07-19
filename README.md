@@ -18,7 +18,7 @@ $ make && make install
 $ node -v
 <br/>
 显示node版本号即为安装成功
-====
+<br/>
 ### centos7服务器安装mongodb
 
 #### 1.新建downloadTools文件夹供下载文件使用
@@ -74,22 +74,24 @@ nohttpinterface = true
 <br/>
 按英文状态下的“:wq”保存并退出；
 <br/>
-参数解释:<p>
+参数解释:
+<br/>
 --dbpath 数据库路径(数据文件)
---logpath 日志文件路径
---master 指定为主机器
---slave 指定为从机器
---source 指定主机器的IP地址
---pologSize 指定日志文件大小不超过64M.因为resync是非常操作量大且耗时，最好通过设置一个足够大的oplogSize来避免resync(默认的 oplog大小是空闲磁盘大小的5%)。
---logappend 日志文件末尾添加，即使用追加的方式写日志
---journal 启用日志
---port 启用端口号
---fork 在后台运行
---only 指定只复制哪一个数据库
---slavedelay 指从复制检测的时间间隔
---auth 是否需要验证权限登录(用户名和密码)
---syncdelay 数据写入硬盘的时间（秒），0是不等待，直接写入
---notablescan 不允许表扫描
---maxConns 最大的并发连接数，默认2000  
---pidfilepath 指定进程文件，不指定则不产生进程文件
---bind_ip 绑定IP，绑定后只能绑定的IP访问服务</p>
+<br/>
+--logpath 日志文件路径<br/>
+--master 指定为主机器<br/>
+--slave 指定为从机器<br/>
+--source 指定主机器的IP地址<br/>
+--pologSize 指定日志文件大小不超过64M.因为resync是非常操作量大且耗时，最好通过设置一个足够大的oplogSize来避免resync(默认的 oplog大小是空闲磁盘大小的5%)。<br/>
+--logappend 日志文件末尾添加，即使用追加的方式写日志<br/>
+--journal 启用日志<br/>
+--port 启用端口号<br/>
+--fork 在后台运行<br/>
+--only 指定只复制哪一个数据库<br/>
+--slavedelay 指从复制检测的时间间隔<br/>
+--auth 是否需要验证权限登录(用户名和密码)<br/>
+--syncdelay 数据写入硬盘的时间（秒），0是不等待，直接写入<br/>
+--notablescan 不允许表扫描<br/>
+--maxConns 最大的并发连接数，默认2000<br/>  
+--pidfilepath 指定进程文件，不指定则不产生进程文件<br/>
+--bind_ip 绑定IP，绑定后只能绑定的IP访问服务
