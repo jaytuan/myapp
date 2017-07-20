@@ -38,16 +38,14 @@ $ mkdir -p mongodb
 #### 7.将 mongodb3.2.4 文件从 /usr/local/downloadTools 目录中移动到 /usr/local/mongodb 目录中：
 $ mv downloadTools/mongodb3.2.4/ mongodb/
 #### 8. 进入到 /usr/local/mongodb/mongodb3.2.4 目录中：
-$ cd mongodb/mongodb3.2.4
+$ cd mongodb/mongodb3.2.4/bin
 #### 9. 在 /usr/local/mongodb/mongodb3.2.4/bin/ 目录中创建一个存放日志的目录：
 $ mkdir -p data/test/logs
 #### 10.在 /usr/local/mongodb/mongodb3.2.4/bin/ 目录中创建一个存放数据文件的目录：
 $ mkdir -p data/test/db
-#### 11.进入 bin 目录中：
-$ cd bin/
-#### 12. 创建配置文件 mongodb.conf：
+#### 11. 创建配置文件 mongodb.conf：
 $ vi mongodb.conf
-#### 13.在 mongodb.conf 写入如下内容：
+#### 12.在 mongodb.conf 写入如下内容：
  #idae - MongoDB config start - 2016-05-02
 <br/>
 #设置数据文件的存放目录
