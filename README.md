@@ -93,3 +93,30 @@ nohttpinterface = true
 --maxConns 最大的并发连接数，默认2000<br/>  
 --pidfilepath 指定进程文件，不指定则不产生进程文件<br/>
 --bind_ip 绑定IP，绑定后只能绑定的IP访问服务
+#### 13.启动 mongodb 服务：
+##### 13.1 以自定义的 mongodb 配置文件方式启动：
+$ ./mongod --config mongodb.conf
+##### 13.2 以修复模式启动 mongodb：
+$ ./mongod --repair -f mongodb.conf
+##### 13.3 以参数式启动：
+$ ./mongod /usr/local/mongodb/mongodb3.2.4/bin/mongod --dbpath=/usr/local/mongodb/mongodb3.2.4/bin/data/test/db --logpath=/usr/local/mongodb/mongodb3.2.4/bin/data/test/logs/mongodb.log --fork
+<br/>
+如果报如下错误：<br/>
+  ERROR: child process failed, exited with error number 1<br/>
+很可能是 mongodb.conf 中配置的路径不一致问题；<br/>
+如果报如下错误：<br/>
+  ERROR: child process failed, exited with error number 100<br/>
+很可能是没有正常关闭导致的，那么可以删除 mongod.lock 文件<br/>
+
+#### 14.查看 mongodb 进程：
+$ ps aux |grep mongodb
+
+#### 15.查看 mongodb 服务的运行日志：
+$ tail -200f /usr/local/mongodb/mongodb3.2.4/bin/data/test/logs/mongodb.log
+
+#### 16.检查端口是否已被启动：
+$ netstat -lanp | grep 27017
+
+#### 17.杀死 mongodb 进程，即可关闭 mongodb 服务：
+$ kill -15 PID<br/>
+//PID 可以通过步骤 16 查看到
