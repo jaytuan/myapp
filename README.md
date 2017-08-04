@@ -9,7 +9,7 @@
 #### 3.解压源码
  $ tar -zxvf node-v6.10.3.tar.gz
 #### 4.进行编译及安装
-$ cd node-v0.8.14
+$ cd node-v6.10.3
 <br/>
 $ ./configure
 <br/>
